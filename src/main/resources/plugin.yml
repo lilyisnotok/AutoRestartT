@@ -1,0 +1,8 @@
+name: AutoRestart
+version: '${version}'
+main: org.lils.autorestart.AutoRestart
+authors:
+  - slides
+api-version: '1.18'
+depend:
+  - AlpineCore
