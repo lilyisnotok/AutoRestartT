@@ -2,10 +2,16 @@ package org.lils.autorestart;
 
 import co.crystaldev.alpinecore.framework.config.AlpineConfig;
 import co.crystaldev.alpinecore.framework.config.object.ConfigMessage;
+import lombok.Getter;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Config extends AlpineConfig {
 
+    @Getter
     private static Config instance;
+    { instance = this; }
 
     public ConfigMessage forceRestartSuccess = ConfigMessage.of(
             "%prefix% You have <highlight>successfully</highlight> initiated a force reboot in <highlight>%seconds%</highlight> seconds.");
@@ -25,10 +31,6 @@ public class Config extends AlpineConfig {
     public ConfigMessage restartBroadcast = ConfigMessage.of(
             "%prefix% The server is now restarting...");
 
-    public static Config getInstance() {
-        if (instance == null) {
-            instance = new Config();
-        }
-        return instance;
-    }
+    public List<String> restartTimes = Arrays.asList("12:00", "00:00");
+
 }

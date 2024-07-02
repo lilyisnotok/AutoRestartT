@@ -1,6 +1,7 @@
 package org.lils.autorestart;
 
 import co.crystaldev.alpinecore.AlpinePlugin;
+import co.crystaldev.alpinecore.framework.engine.AlpineEngine;
 import lombok.Getter;
 import org.jetbrains.annotations.NotNull;
 
@@ -10,7 +11,6 @@ public final class AutoRestart extends AlpinePlugin {
     @Override
     public void onStart() {
         // Plugin startup logic
-
     }
 
     @Override
